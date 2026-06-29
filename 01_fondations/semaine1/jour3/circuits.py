@@ -15,8 +15,8 @@ def impedance_serie(z1, z2):
     """ Retourne l'impédance équivalente de deux impédances en série"""
     return  z1 +z2
 def impedance_parallele(z1,z2,z3):
-    """Retourne l'impédance équivalente de deux impédances parallele."""(1000)
+    """Retourne l'impédance équivalente de deux impédances parallele."""
     return (z1*z2*z3)/(z1*z2+z2z3+z1*z3) 
 def module_et_phase(z):
     """ Retourne le module (ohm) et la phase (degrés) d'une impédance """
-    return abs(z) , np.angle(z, deg= True)_resistance
+    return abs(z) , np.angle(z, deg= True)
