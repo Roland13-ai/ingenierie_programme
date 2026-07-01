@@ -173,21 +173,3 @@ Ligne Signification
 tight_layout() Ajuste automatiquement les espacements pour éviter les chevauchements
 savefig(...) Sauvegarde la figure en PNG dans le dossier data/
 show() Affiche la figure à l'écran
-
----
-
-🎯 Résumé ultra-simple
-
-1. On importe les outils (NumPy, Matplotlib, circuits).
-2. On définit les paramètres (R, C, fréquences).
-3. On calcule pour chaque fréquence (boucle for).
-4. On stocke les résultats dans des listes.
-5. On trace deux graphiques (module et phase).
-6. On sauvegarde et on affiche.
-
----
-
-✍️ Maintenant, à toi
-
-Modifie C = 100e-9 (100 nF) dans le script, relance, et dis-moi ce que tu observes.
-C’est en changeant les valeurs que tu vas vraiment comprendre.
