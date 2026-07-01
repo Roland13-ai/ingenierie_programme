@@ -74,7 +74,7 @@ Path(_file_) Chemin complet du script actuel (reponse_freq.py)
 str(...) Convertit le chemin en texte
 sys.path.insert(0, ...) Ajoute ce chemin temporairement à la liste des dossiers où Python cherche les modules
 
-👉 Résultat : Python peut maintenant trouver circuits.py qui est dans jour3, même si le script est dans jour5.
+ Résultat : Python peut maintenant trouver circuits.py qui est dans jour3, même si le script est dans jour5.
 
 ---
 
@@ -89,7 +89,7 @@ R = 1000 Résistance de 1000 ohms (1 kΩ)
 C = 1e-6 Condensateur de 0,000001 farad (1 µF)
 np.logspace(0, 5, 200) 200 fréquences de 10⁰ = 1 Hz à 10⁵ = 100 000 Hz, espacées logarithmiquement
 
-👉 np.logspace est idéal pour les diagrammes de Bode : beaucoup de points en basses fréquences, moins en hautes fréquences.
+np.logspace est idéal pour les diagrammes de Bode : beaucoup de points en basses fréquences, moins en hautes fréquences.
 
 ---
 
@@ -121,7 +121,7 @@ mod, ph = module_et_phase(z_eq) Récupère le module (Ω) et la phase (degrés)
 modules.append(mod) Ajoute le module à la liste
 phases.append(ph) Ajoute la phase à la liste
 
-👉 Cette boucle fait 200 itérations (une par fréquence). Elle remplit les deux listes avec les résultats.
+Cette boucle fait 200 itérations (une par fréquence). Elle remplit les deux listes avec les résultats.
 
 ---
 
@@ -131,7 +131,7 @@ fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8))
 
 Élément Signification
 plt.subplots(2, 1) Crée 2 lignes, 1 colonne de graphiques
-figsize=(10, 😎 Taille de la figure en pouces (largeur 10, hauteur 😎
+figsize=(10,  Taille de la figure en pouces (largeur 10, hauteur 
 fig La figure entière
 (ax1, ax2) Les deux sous-graphiques : ax1 (en haut), ax2 (en bas)
 
@@ -176,18 +176,3 @@ show() Affiche la figure à l'écran
 
 ---
 
-🎯 Résumé ultra-simple
-
-1. On importe les outils (NumPy, Matplotlib, circuits).
-2. On définit les paramètres (R, C, fréquences).
-3. On calcule pour chaque fréquence (boucle for).
-4. On stocke les résultats dans des listes.
-5. On trace deux graphiques (module et phase).
-6. On sauvegarde et on affiche.
-
----
-
-✍️ Maintenant, à toi
-
-Modifie C = 100e-9 (100 nF) dans le script, relance, et dis-moi ce que tu observes.
-C’est en changeant les valeurs que tu vas vraiment comprendre.
