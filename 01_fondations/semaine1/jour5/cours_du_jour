@@ -42,7 +42,7 @@ plt.tight_layout()
 plt.savefig("01_fondations/semaine1/jour5/data/reponse_RC.png")
 plt.show()
 
----
+
 
 a= Explication bloc par bloc
 
@@ -59,7 +59,7 @@ import matplotlib.pyplot as plt Je veux tracer des graphiques
 import sys Je veux modifier le chemin de recherche de Python
 from pathlib import Path Je veux manipuler des chemins de fichiers
 
----
+
 
 Bloc 2 – Importer ton module circuits
 
@@ -74,7 +74,7 @@ Path(_file_) Chemin complet du script actuel (reponse_freq.py)
 str(...) Convertit le chemin en texte
 sys.path.insert(0, ...) Ajoute ce chemin temporairement à la liste des dossiers où Python cherche les modules
 
-👉 Résultat : Python peut maintenant trouver circuits.py qui est dans jour3, même si le script est dans jour5.
+ Résultat : Python peut maintenant trouver circuits.py qui est dans jour3, même si le script est dans jour5.
 
 ---
 
@@ -89,9 +89,9 @@ R = 1000 Résistance de 1000 ohms (1 kΩ)
 C = 1e-6 Condensateur de 0,000001 farad (1 µF)
 np.logspace(0, 5, 200) 200 fréquences de 10⁰ = 1 Hz à 10⁵ = 100 000 Hz, espacées logarithmiquement
 
-👉 np.logspace est idéal pour les diagrammes de Bode : beaucoup de points en basses fréquences, moins en hautes fréquences.
+np.logspace pour les diagrammes de Bode : beaucoup de points en basses fréquences, moins en hautes fréquences.
 
----
+
 
 Bloc 4 – Les listes vides
 
@@ -100,7 +100,7 @@ phases = []
 
 Deux listes vides. Elles vont se remplir au fur et à mesure des calculs.
 
----
+
 
 Bloc 5 – La boucle de calcul
 
@@ -121,9 +121,9 @@ mod, ph = module_et_phase(z_eq) Récupère le module (Ω) et la phase (degrés)
 modules.append(mod) Ajoute le module à la liste
 phases.append(ph) Ajoute la phase à la liste
 
-👉 Cette boucle fait 200 itérations (une par fréquence). Elle remplit les deux listes avec les résultats.
+Cette boucle fait 200 itérations (une par fréquence). Elle remplit les deux listes avec les résultats.
 
----
+
 
 Bloc 6 – Créer la figure et les deux sous-graphiques
 
@@ -131,11 +131,11 @@ fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8))
 
 Élément Signification
 plt.subplots(2, 1) Crée 2 lignes, 1 colonne de graphiques
-figsize=(10, 😎 Taille de la figure en pouces (largeur 10, hauteur 😎
+figsize=(10,  Taille de la figure en pouces (largeur 10, hauteur 
 fig La figure entière
 (ax1, ax2) Les deux sous-graphiques : ax1 (en haut), ax2 (en bas)
 
----
+
 
 Bloc 7 – Graphique du haut (module)
 
@@ -150,7 +150,7 @@ set_ylabel(...) Étiquette de l'axe Y
 set_title(...) Titre du graphique
 grid(True) Affiche la grille
 
----
+
 
 Bloc 8 – Graphique du bas (phase)
 
@@ -159,9 +159,7 @@ ax2.set_xlabel("Fréquence (Hz)")
 ax2.set_ylabel("Phase (°)")
 ax2.grid(True)
 
-Même principe que le haut, avec un label pour l'axe X (puisque c'est le graphique du bas).
 
----
 
 Bloc 9 – Sauvegarde et affichage
 
@@ -173,3 +171,8 @@ Ligne Signification
 tight_layout() Ajuste automatiquement les espacements pour éviter les chevauchements
 savefig(...) Sauvegarde la figure en PNG dans le dossier data/
 show() Affiche la figure à l'écran
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 3a06d6db9eb6684146e4491c4b67ce93704dfc09
