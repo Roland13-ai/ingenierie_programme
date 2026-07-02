@@ -179,7 +179,7 @@ Solution : Utiliser ~/.ssh/... ou le chemin complet C:\Users\ADMIN\.ssh\....
 Cause : Interface mobile simplifiée.
 Solution : Faire la manipulation sur le PC, ou activer « Version pour ordinateur » dans le navigateur mobile.
 
- Problème 9 : git remote add origin git@github.com: Roland13-ai/... (espace après 🙂
+ Problème 9 : git remote add origin git@github.com: Roland13-ai/... (espace après )
 
 Cause : Espace parasite après les deux-points.
 Solution : Supprimer l'espace : git@github.com:Roland13-ai/....
