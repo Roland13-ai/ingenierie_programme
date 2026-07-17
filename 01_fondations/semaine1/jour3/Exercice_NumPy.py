@@ -11,7 +11,7 @@ I = Vin / Req
 VR1 = R1 * I
 VR2 = R2 * I
 
+print("Vin (V) | I (A) | VR1 (V) | VR2 (V)")
 print("-" * 40)
 for i in range(len(Vin)):
-    print(f" {Req} | {Vin[i]:6.0f}  | {I[i]:.1f} | {VR1[i]:6.2f} | {VR2[i]:.2f}")
-print("-" * 40)
+    print(f"{Vin[i]:6.0f}  | {I[i]:.4f} | {VR1[i]:6.2f} | {VR2[i]:6.2f}")
