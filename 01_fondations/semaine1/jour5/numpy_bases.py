@@ -10,7 +10,7 @@ courants = tensions / R
 print("Courants (A) :", courants)
 
 # 3. Puissance : P = U * I
-puissances = tensions * courants
+puissances = tensions * courants5
 print("Puissances (W) :", puissances)
 
 # 4. Extraire les valeurs > 2.5 V
