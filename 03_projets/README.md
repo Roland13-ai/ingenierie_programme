@@ -1,140 +1,56 @@
+Crée un fichier README.md dans 03_projets/ :
 
-🎯 Projet – Analyse d’un circuit RLC série
-Objectif : Partir des valeurs de 
-R
-R, 
-L
-L, 
-C
-C et produire un rapport complet (calculs, graphiques, fichier CSV).
+markdown
+# Projet : Analyse d'un circuit RLC série
 
-Déroulé en 5 étapes
-Saisie des paramètres
-L’utilisateur entre 
-R
-R (Ω), 
-L
-L (H), 
-C
-C (F), la plage de fréquences (fmin, fmax) et le nombre de points.
+## 📝 Description
 
-Calculs numériques (NumPy)
+Ce projet réalise l'analyse complète d'un circuit RLC série à partir des paramètres saisis par l'utilisateur (R, L, C, plage de fréquences).
 
-Vecteur de fréquences 
-f
-f
+Il combine **4 frameworks Python** :
+- **NumPy** : calculs vectoriels (impédance, module, phase, fréquence de résonance)
+- **SymPy** : calcul symbolique (formule exacte de l'impédance, dérivation pour trouver la résonance)
+- **Matplotlib** : tracé du diagramme de Bode (module et phase)
+- **CSV** : export des données pour analyse externe (Excel, etc.)
 
-Pulsation 
-ω
-=
-2
-π
-f
-ω=2πf
+## 🚀 Utilisation
 
-Impédance 
-Z
-=
-R
-+
-j
-(
-L
-ω
-−
-1
-C
-ω
-)
-Z=R+j(Lω− 
-Cω
-1
-​
- )
+```bash
+python projet_RLC.py
+Puis saisir les valeurs demandées :
 
-Module 
-∣
-Z
-∣
-∣Z∣ et phase 
-φ
-φ
+Résistance R (Ω)
 
-Fréquence de résonance 
-f
-0
-=
-1
-2
-π
-L
-C
-f 
-0
-​
- = 
-2π 
-LC
-​
- 
-1
-​
-  (calculée avec NumPy)
+Inductance L (H)
 
-Calcul symbolique (SymPy)
+Capacité C (F)
 
-Déclarer 
-R
-,
-L
-,
-C
-,
-ω
-R,L,C,ω comme symboles
+Fréquence minimale (Hz)
 
-Écrire la formule de l’impédance 
-Z
-Z
+Fréquence maximale (Hz)
 
-Dériver l’expression pour retrouver la fréquence de résonance
+Nombre de points
 
-Vérifier que le résultat correspond à 
-f
-0
-=
-1
-/
-(
-2
-π
-L
-C
-)
-f 
-0
-​
- =1/(2π 
-LC
-​
- )
+📊 Résultats générés
+Affichage de la fréquence de résonance et du module minimal
 
-Tracé du diagramme de Bode (Matplotlib)
+Formule symbolique de l'impédance et dérivée
 
-Figure avec deux sous‑graphiques (module et phase)
+Diagramme de Bode (module + phase) sauvegardé en PNG
 
-Échelle semi‑log pour l’axe des fréquences
+Export CSV des données (fréquence, module, phase)
 
-Marqueur vertical à la fréquence de résonance
+🧰 Technologies utilisées
+Outil	                                      Rôle
+NumPy                                     	Calculs numériques vectorisés
+SymPy                                      	Calcul symbolique (formules exactes)
+Matplotlib	                                Visualisation graphique
+CSV	                                         Export de données tabulaires
 
-Export CSV
-
-Sauvegarder 
-f
-f, 
-∣
-Z
-∣
-∣Z∣ et 
-φ
-φ dans un fichier rlc_analyse.csv
+📁 Fichiers
+text
+03_projets/
+├── projet_RLC.py          # Script principal
+├── bode_RLC.png           # Diagramme de Bode généré
+├── rlc_analyse.csv        # Données exportées
+└── README.md              # Documentation (ce fichier)
